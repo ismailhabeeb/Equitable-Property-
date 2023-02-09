@@ -7,9 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className='bg-danger'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi consectetur culpa illo ex, obcaecati alias fuga hic! Odio, eum quis.
-      </div>
+     
     </div>
   )
 }
