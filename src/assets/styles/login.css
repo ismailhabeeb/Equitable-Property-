@@ -186,7 +186,7 @@
 }
 
 .logfooter {
-  width: 360px;
+  width: 100%;
   justify-content: center;
   text-align: center;
   font-family: 'Montserrat';
@@ -197,8 +197,7 @@
 
 }
 
-.logsignup,
-a {
+.logsignup {
   text-decoration: none !important;
   width: 55px;
   height: 20px;
@@ -210,6 +209,17 @@ a {
   text-shadow: 2px 0px 2px  #FFFBFA ;
   color: #25c254 !important;
  
+}
+a{
+  /* color: #25c254 ; */
+  text-decoration: none !important;
+
+}
+.backhome{
+  margin: auto;
+  /* line-height: 10; */
+  font-size: small;
+  color: #111827 !important;
 }
 #type{
   position: absolute;

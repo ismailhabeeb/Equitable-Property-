@@ -1,0 +1,61 @@
+
+.sticky-topp{
+    top: -40px;
+}
+.sticky-bottom{
+    bottom: 20px;
+    left: 80%;
+}
+.sticky-bottom .btn{
+    background-color: white !important;
+    color: white;
+    border-radius: 3px !important;
+    color: rgb(3, 80, 3);
+    border: solid 1px black !important;
+    font-size: large;
+    font-weight: bolder;
+}
+.sticky-bottom button:hover{
+    border: solid blue 1px;
+    background-color: rgba(255, 255, 255, 0.521);
+
+}
+#top{
+    background-color: rgb(3, 80, 3);
+    height: 40px;
+}
+#top div{
+    position: absolute;
+    right: 15px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+}
+#top div a{
+    color: white !important;
+
+}
+.secondtop{
+  background-color: rgba(153, 241, 153, 0.37) !important;
+
+}
+.map{
+    width: 600px;
+    height: 100%;
+    border: solid 1px ;
+    background-color: #8AB4F8;
+}
+.sticky-to{
+    background-color: #8AB4F8;
+    position: absolute;
+    border-radius: 3px;
+    height: 600px !important;
+    position: sticky;
+    top: 75px;
+}
+.google{
+    font-size: large;
+    font-weight: bolder;
+    background-color: black;
+    margin-bottom: auto;float: bottom;
+}

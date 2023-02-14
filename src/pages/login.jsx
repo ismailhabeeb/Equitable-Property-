@@ -44,11 +44,11 @@ export default function Login() {
         }
 
     }
-    const type = ()=>{
-        if(pasdRef.current.type == "password"){
-            pasdRef.current.type = "text"   
-        }else pasdRef.current.type = "password" 
-    } 
+    const type = () => {
+        if (pasdRef.current.type == "password") {
+            pasdRef.current.type = "text"
+        } else pasdRef.current.type = "password"
+    }
     return (
 
         <main id='form'>
@@ -89,10 +89,14 @@ export default function Login() {
                 </div>
 
             </form>
-            <div className="text-center logfooter d-flex mx-auto">
-                <p className='logfo'>Don't have an account? </p>
-                <Link to="/signup"> Sign up</Link>
+            <div className="text-center logfooter mx-auto">
+                <div className='text-center logfooter d-flex mx-auto'> <p className='logfo'>Don't have an account? </p>
+                    <Link to="/login/signup"> Sign up</Link>
+                </div>
+                <Link to={'/'} className='backhome'>Back to Home </Link>
+
             </div>
+
         </main>
     )
 }

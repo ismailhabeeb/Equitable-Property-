@@ -75,21 +75,26 @@ export default function Signup() {
                     <label htmlFor="floatingInput">Email address</label>
                 </div>
                 <div ref={newpasd} className="form-floating mb-3 inp">
-                    <input ref={newpasdRef} type="password" className="form-control" id="floatingPassword" placeholder="Password" required />
+                    <input minLength={8} ref={newpasdRef} type="password" className="form-control" id="floatingPassword" placeholder="Password" required />
                     <label htmlFor="floatingPassword">Password</label>
                 </div>
                 <div ref={pasd} className="form-floating mb-3 inp">
-                    <input ref={pasdRef} type="password" className="form-control" id="floatingPassword" placeholder="Password" required />
+                    <input minLength={8} ref={pasdRef} type="password" className="form-control" id="floatingPassword" placeholder="Password" required />
                     <label htmlFor="floatingPassword">Confirm Password</label>
                 </div>
                 <button type="submit" className="btn submit mb-3">Sign Up {
                     state && <span className='spinner-border-sm spinner-border'></span>
                 }</button>
             </form>
-            <div className="text-center logfooter d-flex mx-auto">
-                <p className='logfo'>Already have an account? </p>
-                <Link to="/"> Sign In</Link>
+            <div className="text-center ">
+               <div className="text-center logfooter d-flex mx-auto">
+               <p className='logfo'>Already have an account? </p>
+                <Link to="/login"> Sign In</Link>
+               </div>
+            <Link to={'/'} className='backhome'>Back to Home </Link>
+
             </div>
+
         </div>
     )
 }
