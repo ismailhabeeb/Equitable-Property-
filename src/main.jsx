@@ -11,9 +11,13 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './components/login_layout'
 import Login from './pages/login'
 import Signup from './pages/signup'
+import Home from './pages/dashboard/home'
+import LandinPage from './pages/dashboard/landing_page'
+import Forgot_password from './pages/porget_password/forgot_password'
+import Reset_password from './pages/porget_password/reset_password'
 const router = createBrowserRouter([
   {
-    path: '/', element: <Layout />,
+    path: '/login', element: <Layout />,
     errorElement: <h1>Error</h1>,
     children: [
       {
@@ -22,7 +26,23 @@ const router = createBrowserRouter([
       }, {
         path: 'signup',
         element: <Signup />
+      }, {
+        path: 'forget_password',
+        element: <Forgot_password />
+      }, {
+        path: 'reset_password',
+        element: <Reset_password />
       }
+    ]
+  },
+  {
+    path: '/', element: <Home />,
+    errorElement: <h1>Error</h1>,
+    children: [
+      {
+        path: '',
+        element: <LandinPage />
+      },
     ]
   }
 ])
