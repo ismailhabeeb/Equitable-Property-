@@ -3,6 +3,7 @@ import warn from '../assets/images/warning.png'
 import '../assets/styles/login.css'
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
 export default function Signup() {
 
@@ -18,6 +19,11 @@ export default function Signup() {
     const [state, setUsestate] = useState(false);
 
     // navigate("/login/verify");
+    
+    const loginuser = (data) => {
+        return axios.post("http://localhost:9000/signup/", data)
+
+    }
 
     const next = async (ev) => {
 
@@ -34,9 +40,9 @@ export default function Signup() {
 
                 }
 
-                // const response = await post_newpassword(data)
-                consol.log(data)
-                // navigate("/login/verify")
+                const response = await loginuser(data)
+                console.log(data)
+                navigate("/login")
 
 
 
@@ -59,6 +65,16 @@ export default function Signup() {
 
 
     }
+    const type = () => {
+        if (pasdRef.current.type == "password") {
+            pasdRef.current.type = "text"
+        } else pasdRef.current.type = "password"
+    }
+    const typenew = () => {
+        if (newpasdRef.current.type == "password") {
+            newpasdRef.current.type = "text"
+        } else newpasdRef.current.type = "password"
+    }
     return (
         <div id='form'>
             <form onSubmit={next} className='form'>
@@ -77,10 +93,14 @@ export default function Signup() {
                 <div ref={newpasd} className="form-floating mb-3 inp">
                     <input minLength={8} ref={newpasdRef} type="password" className="form-control" id="floatingPassword" placeholder="Password" required />
                     <label htmlFor="floatingPassword">Password</label>
+                    <span id='type'><input onClick={typenew} className="form-check-input" type="checkbox" defaultValue="" id="invalidCheck" /></span>
+
                 </div>
                 <div ref={pasd} className="form-floating mb-3 inp">
                     <input minLength={8} ref={pasdRef} type="password" className="form-control" id="floatingPassword" placeholder="Password" required />
                     <label htmlFor="floatingPassword">Confirm Password</label>
+                    <span id='type'><input onClick={type} className="form-check-input" type="checkbox" defaultValue="" id="invalidCheck" /></span>
+
                 </div>
                 <button type="submit" className="btn submit mb-3">Sign Up {
                     state && <span className='spinner-border-sm spinner-border'></span>
