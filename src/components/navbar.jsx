@@ -3,15 +3,28 @@ import logo from '../assets/images/TreeCity-removedbg.png'
 import { Link } from 'react-router-dom';
 
 export default function Navbar(params) {
-
+    document.onscroll = function () { scrollGo() } 
+    function scrollGo() {
+        if(document.scrollTop > 2){
+            alert("Shout")
+        }else{
+            // alert("Failed")
+        }
+    }
+    
+    const happen = () => {
+        
+    }
     return (
         <div className=''>
             <nav className='d-flex navbar' id='top'>
                 <div className='me-auto'>
-                    <Link className='me-auto' to='/login'>Login/ Signup</Link>
+                    <Link className='me-auto' to='/login'>Login</Link>
+                    <span className='me-auto'>/</span>
+                    <Link className='me-auto' to='/login/signup'>Signup</Link>
                 </div>
             </nav>
-            <nav className="navbar navbar-expand-lg secondtop ">
+            <nav className="navbar navbar-expand-lg secondtop" id='secondtop'>
                 <div className="container-fluid">
                     <a className="navbar-brand" href="#">
                         <img height={50} src={logo} alt="" />
@@ -27,19 +40,8 @@ export default function Navbar(params) {
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Our Projects</a>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
-                                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li>
                             <li className="nav-item">
-                                <a className="nav-link">About Us</a>
+                                <a className="nav-link" href='#'>About Us</a>
                             </li>
                             <li className="nav-item">
                                 <a className="nav-link" href="#">Invest in TreeCity</a>

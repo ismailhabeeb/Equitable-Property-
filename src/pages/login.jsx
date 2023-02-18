@@ -73,8 +73,8 @@ export default function Login() {
                 </div>
                 <div className="d-flex logcheck mb-3">
                     <div className="form-check  ">
-                        <input className="form-check-input" type="checkbox" defaultValue="" id="invalidCheck" />
-                        <label className="form-check-label logre" htmlFor="invalidCheck">
+                        <input className="form-check-input" type="checkbox" defaultValue="" id="invalidCheck2" />
+                        <label className="form-check-label logre" htmlFor='invalidCheck2'>
                             Remember me
                         </label>
                     </div>

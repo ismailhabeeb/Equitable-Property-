@@ -1,5 +1,5 @@
 import "/src/assets/styles/footer.css"
-import logo from '/src/assets/images//TreeCity.webp'
+import logo from '../assets/images/TreeCity-removedbg.png'
 
 function Footer() {
   return (
@@ -44,7 +44,6 @@ function Footer() {
             </div>
 
             <div class="column links">
-              {/* <h4>Bad man</h4> */}
 
               <ul>
 
@@ -71,7 +70,6 @@ function Footer() {
 
 
             <div class="column links">
-              {/* <h3>S</h3> */}
               <ul>
                 <li>
                   <a href="#faq">F.A.Q</a>
@@ -88,7 +86,6 @@ function Footer() {
               </ul>
             </div>
             <div class="column links">
-              {/* <h3>S</h3> */}
               <ul>
                 <li>
                   <a href="#faq">CAREERS</a>
@@ -109,16 +106,7 @@ function Footer() {
               </ul>
             </div>
 
-            {/* <div class="colume subscrib w-100 mx-auto">
-              <h3>Newsletter</h3>
-              <div className=" w-100">
-                <input className="form-control w-100" type="email" placeholder="Your email id here" />
-
-                <textarea className="form-control " name="" id="" cols="300" rows=""></textarea>
-                <button className="btn btn-light">Subscribe</button>
-              </div>
-
-            </div> */}
+            
 
           </div>
 
