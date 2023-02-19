@@ -4,18 +4,17 @@ import { Link, Outlet } from 'react-router-dom';
 import Footer from '../../components/Footer';
 import Navbar from '../../components/navbar';
 import Map from './map';
-
 export default function Home() {
     return (
         <main className=''>
-            <div className='sticky-top sticky-topp'>
+            <div className='sticky-top sticky-topp '>
                 <Navbar />
             </div>
             <div className='d-flex'>
                 <Outlet />
-                <div className='sticky-top sticky-to'>
+                {/* <div className='sticky-top sticky-to ss'>
                     <Map />
-                </div>
+                </div> */}
             </div>
             <span className=' sticky-bottom b' >
                 <button className="btn me-3">Save Search</button>
