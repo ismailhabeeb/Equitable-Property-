@@ -55,13 +55,20 @@
     width: 600px;
     height: 100%;
     border: solid 1px ;
-    /* z-index: 1; */
     background-color: #8AB4F8;
 }
-/* .ss{
-    z-index: -1;
-} */
+
+#mapimg{
+    /* background-image: url(); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* overflow: hidden !important; */
+    width: 100% !important;
+    height: 500px !important;
+}
 .sticky-to{
+    border: solid 1px ;
     background-color: #8AB4F8;
     position: absolute;
     border-radius: 3px;
@@ -72,6 +79,6 @@
 .google{
     font-size: large;
     font-weight: bolder;
-    background-color: black;
+    /* background-color: black; */
     margin-bottom: auto;float: bottom;
 }
